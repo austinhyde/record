@@ -1,0 +1,49 @@
+{
+  "name": "anaglypta",
+  "version": "0.0.1",
+  "description": "A cross-platform wallpaper manager",
+  "main": "index.js",
+  "scripts": {
+    "start-electron": "cross-env NODE_ENV=development nodemon --watch main --exec electron main/index.js",
+    "start-webpack": "cross-env NODE_ENV=development nodemon --watch webpack.config.js --exec webpack-dev-server -- --config-name renderer",
+    "build-webpack": "webpack --config-name renderer",
+    "start": "concurrently \"npm run start-webpack\" \"npm run start-electron\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "concurrently": "^4.0.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "electron": "^2.0.8",
+    "electron-devtools-installer": "^2.2.4",
+    "file-loader": "^1.1.11",
+    "html-webpack-harddisk-plugin": "^0.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.18.4",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "color": "^3.0.0",
+    "electron-dl": "^1.12.0",
+    "electron-screencapture": "^1.1.0",
+    "electron-transparency-mouse-fix": "0.0.1",
+    "electron-util": "^0.9.0",
+    "glamor": "^2.20.40",
+    "moment": "^2.22.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-hot-loader": "^4.1.2"
+  }
+}
